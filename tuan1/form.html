@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var form = document.createElement('form');
+        var inputA = document.createElement('input');
+        inputA.id = 'a';
+        var pA = document.createTextNode('A');
+        var pB = document.createTextNode('B');
+        var br = document.createElement('br');
+        var br1 = document.createElement('br');
+        var inputB = document.createElement('input');
+        inputB.id = 'b';
+        var button1 = document.createElement('button');
+        button1.textContent = 'OK';
+        var div = document.createElement('div');
+        var span = document.createElement('span');
+        span.id = 'sp';
+
+        form.appendChild(pA)
+        form.appendChild(inputA);
+        form.appendChild(br);
+        form.appendChild(pB);
+        form.appendChild(inputB);
+
+        document.body.appendChild(form);
+        document.body.appendChild(br1);
+        document.body.appendChild(button1);
+        document.body.appendChild(span);
+        button1.addEventListener('click', () => {
+            var a = inputA.value;
+            var b = inputB.value;
+            span.innerText = a * 1 + b * 1;
+        })
+    </script>
+</body>
+
+</html>
